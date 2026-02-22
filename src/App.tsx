@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import Disney from "./components/Disney.tsx"
+import Disney from "../components/Disney.tsx"
 import styled from "styled-components";
-import {Character} from "./interfaces/Charcters.ts";
+import {Character} from "../interfaces/Charcters.ts";
 
 const ParentDiv=styled.div`
   width: 80vw;
