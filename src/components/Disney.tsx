@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Character} from "./interfaces/Characters.ts";
+import  {type Character} from "../interfaces/Characters.ts";
 
 const AllCharsDiv=styled.div`
 display: flex;
@@ -34,7 +34,7 @@ align-self: center;
 
 `;
 
-const Styledh=styled.div<{status: string}>`
+const StyledHead=styled.div<{status: string}>`
 font-weight: bolder;
 font-size: x-large;
 
@@ -51,7 +51,7 @@ export default function Disney(props : { data:Character[] } ){
             {
                 props.data.map((char: Character) =>
                     <SingleCharDiv key={char.id} status={char.status}>
-                        <Styledh>{char.name}</Styledh>
+                        <StyledHead>{char.name}</StyledHead>
                         <StyledImg src={char.imageUrl} alt={`image of ${char.name}`}/>
                     </SingleCharDiv>
                     )
