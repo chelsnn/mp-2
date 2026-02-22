@@ -10,7 +10,7 @@ background-color: #832161;
 
 `;
 
-const SingleCharDiv=styled.div<{status: string}>`
+const SingleCharDiv=styled.div`
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -34,7 +34,7 @@ align-self: center;
 
 `;
 
-const StyledHead=styled.div<{status: string}>`
+const StyledHead=styled.div`
 font-weight: bolder;
 font-size: x-large;
 
@@ -50,7 +50,7 @@ export default function Disney(props : { data:Character[] } ){
         <AllCharsDiv >
             {
                 props.data.map((char: Character) =>
-                    <SingleCharDiv key={char.id} status={char.status}>
+                    <SingleCharDiv key={char.id}>
                         <StyledHead>{char.name}</StyledHead>
                         <StyledImg src={char.imageUrl} alt={`image of ${char.name}`}/>
                     </SingleCharDiv>
